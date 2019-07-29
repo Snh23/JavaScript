@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Escribir un programa que pida ingresar coordenadas (x,y) que representan puntos en el plano. 
+        //Informar cuántos puntos se han ingresado en el primer, segundo, tercer y cuarto cuadrante. 
+        // Al comenzar el programa se pide que se ingrese la cantidad de puntos a procesar.
+        var i;
+        var coordenadas;
+        var x;
+        var y;
+        var c1 = 0;
+        var c2 = 0;
+        var c3 = 0;
+        var c4 = 0;
+
+        coordenadas = parseInt(prompt('Ingrese el numero de coordenadas a leer: '));
+
+        for (i = 1; i <= coordenadas; i++)
+        {
+            x = parseInt(prompt('Ingrese la coordenada ' + i + ' para X '));
+            y = parseInt(prompt('Ingrese la coordenada ' + i + ' para Y '));
+
+            document.write(i + ' Coordenada X ' + x);
+            document.write('<br>');
+            document.write(i + ' Coordenada Y ' + y);
+            document.write('<br>');
+            document.write('<br>');
+
+            if (x >= 0 && y >= 0)
+            {
+                c1++;
+            } else if (x < 0 && y >= 0)
+            {
+                c2++;
+            } else if (x < 0 && y < 0)
+            {
+                c3++;
+            } else if (x >= 0 && y < 0)
+            {
+                c4++;
+            } else
+            {
+                ;
+            }
+        }
+        document.write('El primer cuadrante tiene un total de: ' + c1 + ' puntos');
+        document.write('<br>');
+        document.write('El segundo cuadrante tiene un ttoal de: ' + c2 + ' puntos');
+        document.write('<br>');
+        document.write('El tercer cuadrante tiene un total de: ' + c3 + ' puntos')
+        document.write('<br>');
+        document.write('El cuarto cuadrante tiene un total de: ' + c4 + ' puntos');
+    </script>
+</body>
+</html>

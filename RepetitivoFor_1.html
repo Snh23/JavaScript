@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Confeccionar un programa que lea 3 pares de datos, cada par de datos corresponde a la medida 
+        //de la base y la altura de un triángulo. El programa deberá informar:
+            //a)	De cada triángulo la medida de su base, su altura y su superficie.
+            //b)	La cantidad de triángulos cuya superficie es mayor a 12.
+        var i;
+        var base;
+        var altura;
+        var superficie;
+        var contaT = 0;
+
+        for(i = 1; i <= 3; i++)
+        {
+            base = parseInt(prompt('Ingrese la base del triangulo ' + i));
+            altura = parseInt(prompt('Ingrese la Altura del triangulo ' + i));
+            superficie = base * altura;
+            document.write('La base del triangulo ' + i + ' es: ' + base);
+            document.write('<br>');
+            document.write('La Altura del triangulo '+ i + ' es: '+ altura);
+            document.write('<br>');
+            document.write('La superficie del triangulo '+ i + ' es: ' + superficie);
+            document.write('<br>');
+            document.write('<br>');
+
+            if (superficie > 12)
+            {
+                contaT++
+            }
+        }
+        document.write('La cantidad de triangulos cuya superficie es mayor a 12 es de: ' + contaT);
+    </script>
+</body>
+</html>
