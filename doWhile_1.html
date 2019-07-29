@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <title>DoWhile 1</title>
+    </head>
+    <body>
+        <script>
+            //Realizar un programa que acumule (sume) valores ingresados por teclado hasta 
+            //ingresa el 9999 (no sumar dicho valor, solamente indica que ha finalizado la carga). 
+            //Imprimir el valor acumulado e informar si dicho valor es cero, mayor a cero o menor a cero.
+
+            var val;
+            var sum = 0;
+            do 
+            {
+                val = parseInt(prompt('Ingrese un valor entre 0 y 9999: ', ''));
+                if (val != 9999)
+                {
+                    sum = sum + val;
+                }
+            } while (val != 9999);
+            document.write('La suma es: ' + sum);
+        </script>
+    </body>
+</html>

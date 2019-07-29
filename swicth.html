@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>switch</title>
+</head>
+<body>
+    <script>
+        //Estructuras switch - - 11
+        //Solicitar el ingreso alguna de estas palabras (casa, mesa, perro, gato) luego mostrar la palabra 
+        //traducida en inglés. Es decir, si se ingresa 'casa' debemos mostrar el texto 'house' en la página.
+        var palabra;
+        palabra = prompt('Ingrese alguna de las siguientes palabras: (casa, mesa, perro, gato)', '');
+        switch (palabra){
+            case 'casa': document.write('House');
+            break;
+            case 'mesa': document.write('table');
+            break;
+            case 'perro': document.write('dog');
+            break;
+            case 'gato': document.write('cat');
+            break;
+            default : document.write('Palabra invalida');
+        }
+    </script>
+</body>
+</html>
+    

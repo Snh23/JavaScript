@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Escribir un programa que lea 10 notas de alumnos y nos informe cuántos tienen 
+        // notas mayores o iguales a 7 y cuántos menores.
+        var x = 1; //contador
+        var nota; //acumulador
+        var mayor = 0;
+        var menor = 0;
+        while(x <= 10)
+        {
+            nota = prompt('Ingrese la nota ' + x + ': ', '');
+            if (parseInt(nota) >= 7){
+                mayor = mayor + 1;
+            } else {
+                menor = menor + 1;
+            }
+            x = x + 1;
+        }
+
+        document.write('Un total de ' + mayor + ' tuvieron una calificacion mayor o igual a 7');
+        document.write('<br>');
+        document.write('Un total de ' + menor + ' tuvieron una calificacion menor a 7');
+    </script>
+</body>
+</html>

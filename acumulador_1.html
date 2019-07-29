@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Se ingresan un conjunto de 5 alturas de personas por teclado. Mostrar la altura promedio de las personas.
+        var x = 1;
+        var altura;
+        var prom = 0;
+
+        while (x <= 5)
+        {
+            altura = parseFloat(prompt('Ingrese la altura ' + x + ' :', ''));
+            prom = prom + altura;
+            x = x + 1;
+        }
+        var tot = prom / (x - 1); // restamos 1 a x ya que al final de while x vale 6
+        document.write(prom);
+        document.write('<br>');
+        document.write(altura);
+        document.write('<br>');
+        document.write('La altura promedio de las 5 personas es: ' + tot + ' mts.');
+    </script>
+</body>
+</html>

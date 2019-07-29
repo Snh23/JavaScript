@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Realizar un programa que permita cargar dos listas de 3 valores cada una. 
+        //Informar con un mensaje cual de las dos listas tiene un valor acumulado mayor 
+        //(mensajes 'Lista 1 mayor', 'Lista 2 mayor', 'Listas iguales')
+        //Tener en cuenta que puede haber dos o más estructuras repetitivas en un algoritmo.
+        var x = 1;
+        var val1;
+        var tot1 = 0;
+        var val2;
+        var tot2 = 0;
+
+        while(x <= 3)
+        {
+            val1 = parseInt(prompt('Ingrese el valor ' + x + ' de la lista 1:', ''));
+            tot1 = tot1 + val1;
+            val2 = parseInt(prompt('Ingrese el valor ' + x + ' de la lista 2:', ''));
+            tot2 = tot2 + val2;
+
+            x = x + 1;
+        }
+        //x = 1;
+        
+        if (tot1 == tot2)
+        {
+            document.write('La Lista 1 y la Lista 2 son Iguales, el total de ambas listas es: ' + tot1);
+            document.write('<br>');
+        } else {
+            if(tot1 > tot2)
+            {
+                document.write('La Lista 1 con un total de: ' + tot1 + ' es mayor a la Lista 2 con total de: ' + tot2);
+            } else {
+                document.write('La Lista 1 con un total de: ' + tot1 + ' es menor a la Lista 2 con total de: ' + tot2);
+            } 
+        }
+    </script>
+</body>
+</html>
