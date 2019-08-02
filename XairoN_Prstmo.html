@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Realiza un programa que solicite la cantidad de prestamos adquiridos, 
+        //cantidad solicitada en cada prestamo, interes anual de cada prestamo, numero de personas que adquirieron
+        //el prestamo en conjunto y numero de meses en que se pagara el prestamo. Mostrar los datos ingresados
+        // de cada prestamo ademas:
+            //a) calcular y mostrar el total a pagar de cada prestamo segun el interes anual
+            //b) dividir el total a pagar por cada persona y mostrarlo
+            //c) mostrar el total a pagar entre los dos prestamos
+            //d) mostrar el total a pagar por cada persona entre los dos prestamos.
+        
+        var i;
+        var Nprestamos;
+        var CantidadSolicitada;
+        var InteresAnual;
+        var Npersonas;
+        var Nmeses;
+        var InteresPrestamo;
+        var InteresMes;
+        var PagoPrestamo;
+        var PagoPorPersona;
+        var TPrestamos = 0;
+        var TPagoPersona = 0;
+
+        Nprestamos = parseInt(prompt('Ingrese el numero de prestamos adquiridos', ''));
+        document.write('Arion adquirio ' + Nprestamos + ' prestamos');
+        document.write('<br>');
+
+        for (i = 1; i <= Nprestamos; i++)
+        {
+            CantidadSolicitada = parseFloat(prompt('Cantidad Solicitada en el Prestamo ' + i + ': ', ''));
+            InteresAnual = parseFloat(prompt('Ingrese el interes anual del prestamo ' + i + ': ', ''));
+            Npersonas = parseInt(prompt('Numero de personas que comparten el prestamo ' + i + ': ', ''));
+            Nmeses = parseInt(prompt('Numero de meses en que se pagara el prestamo ' + i + ': ', ''));
+
+            InteresPrestamo = (InteresAnual / 100) * CantidadSolicitada;
+            InteresMes = ((InteresAnual / 100) / 12) * CantidadSolicitada;
+            PagoPrestamo = (InteresMes * Nmeses) + CantidadSolicitada;
+            PagoPorPersona = PagoPrestamo / Npersonas;
+
+            TPrestamos = TPrestamos + PagoPrestamo;
+            TPagoPersona = TPagoPersona + PagoPorPersona;
+
+            document.write(i + ' Cantidad solicitada en el prestamo: ' + CantidadSolicitada);
+            document.write('<br>');
+            document.write('Interes anual del perstamo: ' + InteresAnual);
+            document.write('<br>');
+            document.write('Personas que participan en el prestamo: ' + Npersonas);
+            document.write('<br>');
+
+        }
+    </script>
+</body>
+</html>
