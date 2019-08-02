@@ -29,7 +29,7 @@
     for (i = 1; i <= NProd; i++)
     {
         Producto = prompt('Nombre del producto ' + i + ': ', '');
-        CantProd = parseInt(prompt('Cantidad en Lts/Pzs del producto ' + i + ': ', ''));
+        CantProd = parseFloat(prompt('Cantidad en Lts/Pzs del producto ' + i + ': ', ''));
         PrecioP = parseFloat(prompt('Ingrese el precio de Produccion del Producto ' + i + ': ', ''));
         PrecioV = parseFloat(prompt('Ingrese el precio de venta del producto ' + i + ': ', ''));
         DifPV = (PrecioV - PrecioP) * CantProd;
