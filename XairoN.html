@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //Realizar un programa que solicite numero de productos, producto, cantidad de producto, precio de produccion, precio de venta. 
+    //mostrar los datos ingresados asi como la diferencia entre precio de venta y produccion.
+
+    var i;
+    var NProd;
+    var Producto;
+    var CantProd = 0;
+    var PrecioP;
+    var PrecioV;
+    var DifPV;
+    var DifPVT = 0;
+
+    NProd = parseInt(prompt('Ingrese la cantidad de productos a registrar: ', ''));
+
+    document.write('XairoN - ' + NProd + ' productos a vender');
+    document.write('<br>');
+    document.write('<br>');
+
+    for (i = 1; i <= NProd; i++)
+    {
+        Producto = prompt('Nombre del producto ' + i + ': ', '');
+        CantProd = parseInt(prompt('Cantidad en Lts/Pzs del producto ' + i + ': ', ''));
+        PrecioP = parseFloat(prompt('Ingrese el precio de Produccion del Producto ' + i + ': ', ''));
+        PrecioV = parseFloat(prompt('Ingrese el precio de venta del producto ' + i + ': ', ''));
+        DifPV = (PrecioV - PrecioP) * CantProd;
+        DifPVT = DifPVT + DifPV;
+
+        document.write(i + ' ' + Producto + ':');
+        document.write('<br>');
+        document.write('Cantidad a vender: ' + CantProd);
+        document.write('<br>');
+        document.write('El precio de produccion es de: ' + (PrecioP * CantProd));
+        document.write('<br>');
+        document.write('El precio de Venta es de: ' + (PrecioV * CantProd));
+        document.write('<br>');
+        document.write('La ganancia es de: ' + DifPV);
+        document.write('<br>');
+        document.write('<br>');
+    }
+
+    document.write('La ganacia total es de: ' + DifPVT);
+    </script>
+</body>
+</html>
